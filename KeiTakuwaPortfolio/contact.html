@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Kei Takuwa</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Kei Takuwa Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact</h1>
+    <p>If you would like to get in touch, feel free to <a href="mailto:keitaku85@gmail.com">email me</a> or fill out the form below:</p>
+
+    <form>
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <p>Preferred Contact Method:</p>
+      <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+      <label for="contactEmail">Email</label><br>
+      <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+      <label for="contactPhone">Phone</label><br><br>
+
+      <label>
+        <input type="checkbox" name="subscribe" value="yes">
+        Subscribe to newsletter
+      </label><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kei Takuwa</p>
+  </footer>
+  <script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    alert("Thank you for contacting me! Your message has been received.");
+    this.reset(); 
+  });
+</script>
+</body>
+</html>
